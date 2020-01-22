@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
 import {ToastrService} from '../common/toastr-service';
+import { ActivatedRoute } from '@angular/router';
  
 @Component({
   template: `
@@ -14,12 +15,12 @@ import {ToastrService} from '../common/toastr-service';
 export class StudentListComponent implements OnInit{
   student: any[]
 
-  constructor(private students: StudentService, private toastr: ToastrService){
+  constructor(private students: StudentService, private toastr: ToastrService, private route: ActivatedRoute){
     
   }
 
   ngOnInit(){
-    this.student = this.students.getStudents()
+    this.student = this.route.snapshot.data['student']
   }
 
   handleToastr(dataName){
