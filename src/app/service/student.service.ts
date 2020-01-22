@@ -1,9 +1,12 @@
-import {Injectable} from '@angular/core'
+import {Injectable} from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class StudentService{
   getStudents(){
-    return STUDENTS;
+    let subject = new Subject()
+    setTimeout(() => {subject.next(STUDENTS); subject.complete();},100)
+    return subject
   }
 
   getStudent(id:number){

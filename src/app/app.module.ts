@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import {StudentThumbnailComponent} from './shared/student-thumbnail.component'
-import { StudentService } from './service/student-service';
+import { StudentService } from './service/student.service';
 import {ToastrService} from './common/toastr-service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import {CreateStudentComponent} from './shared/create-student.component';

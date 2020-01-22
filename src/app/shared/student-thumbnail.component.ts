@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core'
 @Component({
   selector: 'student-thumbnail',
   template: `
-  <div [routerLink]="['/students',student.id]"class="well hoverwell thumbnail">
+  <div [routerLink]="['/students',student.id]" class="list-group-item">
     <h2 >{{student?.name}}</h2>
       <div>Age: {{student?.age}}</div>
       <div>Address: {{student?.address}}</div>

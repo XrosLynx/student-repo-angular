@@ -1,6 +1,6 @@
 import {Router, ActivatedRouteSnapshot,CanActivate} from '@angular/router';
 import {Injectable} from '@angular/core';
-import {StudentService} from '../service/student-service';
+import {StudentService} from '../service/student.service';
 
 @Injectable()
 export class StudentRouterActivator implements CanActivate{
