@@ -3,5 +3,6 @@ export interface IStudent{
   name: string
   age: number
   address: string
-  gwa: number
+  gwa?: number
+  grade?: number
 }

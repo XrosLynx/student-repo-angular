@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { IStudent } from './shared/student.model'
+import { IStudent } from './shared/index';
 
 @Injectable()
 export class StudentService{
@@ -10,7 +10,7 @@ export class StudentService{
     return subject
   }
 
-  getStudent(id:number): IStudent[]{
+  getStudent(id:number): IStudent{
     return STUDENTS.find(stud => stud.id === id)
   }
 }

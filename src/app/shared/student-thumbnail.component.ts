@@ -1,11 +1,11 @@
 import {Component, Input} from '@angular/core'
-import { IStudent } from './shared/student.model'
+import { IStudent } from '../shared/index'
 
 @Component({
   selector: 'student-thumbnail',
   template: `
   <div [routerLink]="['/students',student.id]" class="list-group-item">
-    <h2 >{{student?.name}}</h2>
+    <h2 >{{student?.name | uppercase}}</h2>
       <div>Age: {{student?.age}}</div>
       <div>Address: {{student?.address}}</div>
       <div *ngIf="student?.gwa">GWA: {{student?.gwa}}</div>
@@ -20,5 +20,5 @@ import { IStudent } from './shared/student.model'
 })
 
 export class StudentThumbnailComponent{
-  @Input() student: IStudent
+  @Input() student:IStudent
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
-import {ToastrService} from '../common/toastr-service';
+import { ToastrService }  from './common/toastr-service';
 import { ActivatedRoute } from '@angular/router';
-
+import { IStudent } from '../shared/index';
  
 @Component({
   template: `
@@ -27,4 +27,6 @@ export class StudentListComponent implements OnInit{
   handleToastr(dataName){
     this.toastr.success(dataName)
   }
+
+  
 }

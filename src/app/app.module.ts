@@ -10,12 +10,12 @@ import {
   StudentDetailsComponent,
   CreateStudentComponent,
   StudentRouterActivator,
-  StudentResolverService
+  StudentResolverService,
+  ToastrService
 } from './index'
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import {ToastrService} from './common/toastr-service';
 import {Error404Component} from './errors/error-404.component';
 import {appRoutes} from './routes';
 
