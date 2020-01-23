@@ -1,13 +1,15 @@
 import {Injectable} from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { IStudent } from './shared/index';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class StudentService{
+  constructor(private http: HttpClient){
+
+  }
   getStudents(): Observable<IStudent[]>{
-    let subject = new Subject<IStudent[]>()
-    setTimeout(() => {subject.next(STUDENTS); subject.complete();},100)
-    return subject
+    return this.http.get<IStudent[]>('/api/students')
   }
 
   getStudent(id:number): IStudent{

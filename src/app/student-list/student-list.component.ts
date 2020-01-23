@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
-import { ToastrService }  from './common/toastr-service';
+
 import { ActivatedRoute } from '@angular/router';
 import { IStudent } from '../shared/index';
  
@@ -24,9 +24,7 @@ export class StudentListComponent implements OnInit{
     this.student = this.route.snapshot.data['student']
   }
 
-  handleToastr(dataName){
-    this.toastr.success(dataName)
-  }
+ 
 
   
 }

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {StudentService} from '../service/student.service';
 import {ActivatedRoute} from '@angular/router';
 import { IStudent } from '../shared/index';
-
+import { ToastrService }  from '../common/toastr-service';
 
 @Component({
   templateUrl: './student-details.component.html',
@@ -20,6 +20,10 @@ export class StudentDetailsComponent implements OnInit{
   
   ngOnInit(){
     this.student = this.studentService.getStudent(+this.route.snapshot.params['id'])
+  }
+
+  handleToastr(data){
+    this.toastr.success(data)
   }
 
   

@@ -17,8 +17,10 @@
     "jasmine-core": "2.99.1",
     "jasmine-marbles": "0.6.0",
     "jquery": ">=3.4.1",
+    "ngf-server": "^1.0.2",
     "popper.js": "^1.16.0",
     "rxjs": "6.5.4",
+    "server": "^1.0.22",
     "toastr": "^2.1.4",
     "tslib": "1.10.0",
     "web-animations-js": "2.3.2",
@@ -26,10 +28,11 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "server": "node node_module/ngf-server/server.js",
     "e2e": "ng e2e"
   },
   "devDependencies": {
