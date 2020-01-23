@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core'
+import { IStudent } from './shared/student.model'
 
 @Component({
   selector: 'student-thumbnail',
@@ -19,5 +20,5 @@ import {Component, Input} from '@angular/core'
 })
 
 export class StudentThumbnailComponent{
-  @Input() student
+  @Input() student: IStudent
 }

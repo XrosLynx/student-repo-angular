@@ -1,20 +1,21 @@
 import {Injectable} from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { IStudent } from './shared/student.model'
 
 @Injectable()
 export class StudentService{
-  getStudents(){
-    let subject = new Subject()
+  getStudents(): Observable<IStudent[]>{
+    let subject = new Subject<IStudent[]>()
     setTimeout(() => {subject.next(STUDENTS); subject.complete();},100)
     return subject
   }
 
-  getStudent(id:number){
+  getStudent(id:number): IStudent[]{
     return STUDENTS.find(stud => stud.id === id)
   }
 }
 
-const STUDENTS = [
+const STUDENTS: IStudent[] = [
   {
     id: 1,
     name: 'Michael John',
