@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { IStudent } from './shared/index';
 import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators'
 
 @Injectable()
 export class StudentService{
@@ -9,11 +10,18 @@ export class StudentService{
 
   }
   getStudents(): Observable<IStudent[]>{
-    return this.http.get<IStudent[]>('/api/students')
+    return this.http.get<IStudent[]>('/api/students').pipe(catchError(this.handleError<IStudent>('getStudents, []')))
+  }
+
+  private handleError<T> (operation = 'operation', result?: T){
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    }
   }
 
   getStudent(id:number): IStudent{
-    return STUDENTS.find(stud => stud.id === id)
+    return this.http.get<IStudent>('/api/students/' + id).pipe(catchError(this.handleError<IStudent>('getStudents')))
   }
 }
 

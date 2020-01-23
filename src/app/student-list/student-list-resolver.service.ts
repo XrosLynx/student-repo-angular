@@ -11,6 +11,6 @@ export class StudentResolverService{
   }
 
   resolve(){
-    return this.studentService.getStudents().pipe(map(student => student))
+    return this.studentService.getStudents().subscribe()
   }
 }

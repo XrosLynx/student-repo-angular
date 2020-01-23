@@ -19,7 +19,9 @@ export class StudentDetailsComponent implements OnInit{
   }
   
   ngOnInit(){
-    this.student = this.studentService.getStudent(+this.route.snapshot.params['id'])
+    this.student = this.studentService.getStudent(+this.route.snapshot.params['id']).subscribe((student: IStudent)=>{
+      this.student = student
+    })
   }
 
   handleToastr(data){
