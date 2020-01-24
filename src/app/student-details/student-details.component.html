@@ -1,20 +1,27 @@
 <div class="row justify-content-center"> 
+<form [formGroup]="studentDetails">
 <div class="form-group">
   <label for="name"> Name</label>
-  <input type="text" id="name" class="form-control" placeholder="Name">
+  <input formControlName="name" type="text" id="name" class="form-control" placeholder="Name">
 
   <label for="age"> Age</label>
-  <input type="text" id="age" class="form-control" placeholder="Age">
+  <input formControlName="age" type="text" id="age" class="form-control" placeholder="Age">
+
+  <label for="address">Address</label>
+  <input formControlName="addr" type="text" id="address" class="form-control" placeholder="Age">
+
+  <label for="gwa"> GWA</label>
+  <input formControlName="gwa" type="text" id="gwa" class="form-control" placeholder="Age">
+
   <div>
     <h2>{{student?.name | uppercase}} </h2>
   </div>
 
   <div>
-    <div>
       <div><strong>Age:</strong> {{student?.age}}</div>
       <div><strong>Address:</strong> {{student?.address}}</div>
       <div><strong>GWA:</strong> {{student?.gwa}}</div>
-    </div>
   </div>
 </div>
+</form>
 </div>
