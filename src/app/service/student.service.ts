@@ -30,6 +30,34 @@ const STUDENTS: IStudent[] = [
     age: 23,
     address: 'Makati',
     grade: 87
-  }
+  },
+  {
+    id: 3,
+    name: 'Roy Han',
+    age: 23,
+    address: 'Makati',
+    grade: 87
+  },
+  {
+    id: 4,
+    name: 'Michael John',
+    age: 20,
+    address: 'Taguig',
+    gwa: 92
+  },
+  {
+    id: 5,
+    name: 'Roy Han',
+    age: 23,
+    address: 'Makati',
+    grade: 87
+  },
+  {
+    id: 6,
+    name: 'Roy Han',
+    age: 23,
+    address: 'Makati',
+    grade: 87
+  },
   
 ]

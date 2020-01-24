@@ -1,11 +1,12 @@
 import {Component, Input} from '@angular/core'
 import { IStudent } from '../shared/index'
+
 @Component({
   selector: 'student-thumbnail',
   template: `
-  <div [routerLink]="['/students',student.id]">
-    <h2 class="list-group-item active">{{student?.name | uppercase}}</h2>
-      <div class="list-group-item">
+  <div [routerLink]="['/students',student.id]" class="list-group-item">
+    <h2>{{student?.name | uppercase}}</h2>
+      <div>
         <div>Age: {{student?.age}}</div>
       <div>Address: {{student?.address}}</div>
       <div *ngIf="student?.gwa">GWA: {{student?.gwa}}</div>
@@ -15,7 +16,12 @@ import { IStudent } from '../shared/index'
   `,
   styles:[`
   .list-group-item{
-    margin: 0;
+    margin-top: 20px;
+    border-top: 3px solid #1976d2;
+  }
+  .list-group{
+    margin-top: 20px;
+    
   }
   `]
 })

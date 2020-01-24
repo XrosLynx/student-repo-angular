@@ -1,49 +1,6 @@
 /* Global Styles */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-* {
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #616161;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-}
-
-
-
-router-outlet + *  {
-  padding: 0 16px;
-}
-
-/* Text */
-
-h1 {
-  font-size: 32px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h1, h2 {
-  font-weight: lighter;
-}
-
-p {
-  font-size: 14px;
-}
-
-/* Hyperlink */
-
-a {
-  cursor: pointer;
-  color: #1976d2;
-  text-decoration: none;
-}
 /* Global Styles */
 
 * {
@@ -58,10 +15,6 @@ body {
   margin: 0;
   background-color: whitesmoke
 }
-.hoverwell:hover{
-  background-color: #e7e7e7
-}
-
 .container {
   display: flex;
   flex-direction: row;
@@ -74,7 +27,7 @@ router-outlet + *  {
 /* Text */
 
 h1 {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 h2 {

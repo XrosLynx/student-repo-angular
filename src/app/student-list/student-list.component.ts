@@ -6,9 +6,9 @@ import { IStudent } from '../shared/index';
  
 @Component({
   template: `
-  <div class="row">
+  <div class="row justify-content-center" >
   <div class="col-md-12 py-4 text-left">
-    <h1>
+    <h1 class= "margin">
       List of Students
     </h1>
     <hr/>
@@ -17,7 +17,13 @@ import { IStudent } from '../shared/index';
     <student-thumbnail [student]= "student"></student-thumbnail>
   </div>
   </div>
-  `,
+  `,styles:[`
+    .margin{
+      margin-left: 50px;
+      margin-right: 50px;
+      width: 100%;
+    }
+  `]
 })
 export class StudentListComponent implements OnInit{
   student: IStudent[]
