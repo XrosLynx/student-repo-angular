@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../service/student-service';
+import { StudentService } from '../service/student.service';
 import {ToastrService} from '../common/toastr-service';
  
 @Component({
   template: `
   <div class="row">
-    <div class="thumbnail" *ngFor = "let student of student" class="col-md-6">
+    <div *ngFor = "let student of student" class="col-md-6">
     <student-thumbnail [student]= "student"></student-thumbnail>
     </div>
   </div>
