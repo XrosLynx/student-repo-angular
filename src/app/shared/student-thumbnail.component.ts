@@ -11,12 +11,7 @@ import { IStudent } from '../shared/index'
       <div *ngIf="student?.gwa">GWA: {{student?.gwa}}</div>
       <div *ngIf="student?.grade">Grade: {{student?.grade}}</div>
   </div>
-  `,
-  styles:[`
-  .thumbnail{min-height: 210px; margin: 10px;}
-  .pad-left{margin-left: 100px;}
-  .well{background-color: #e7e7e7;}
-  `]
+  `
 })
 
 export class StudentThumbnailComponent{

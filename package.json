@@ -29,11 +29,10 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "server": "node node_module/ngf-server/server.js",
     "e2e": "ng e2e"
   },
   "devDependencies": {

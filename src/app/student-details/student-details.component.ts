@@ -19,13 +19,11 @@ export class StudentDetailsComponent implements OnInit{
   }
   
   ngOnInit(){
-    this.student = this.studentService.getStudent(+this.route.snapshot.params['id']).subscribe((student: IStudent)=>{
-      this.student = student
-    })
+    this.student = this.studentService.getStudent(+this.route.snapshot.params['id'])
   }
 
-  handleToastr(data){
-    this.toastr.success(data)
+   handleToastr(dataName){
+    this.toastr.success(dataName)
   }
 
   

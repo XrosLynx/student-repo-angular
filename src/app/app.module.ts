@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import {
   StudentListComponent,
@@ -25,7 +24,6 @@ import {appRoutes} from './routes';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
