@@ -17,8 +17,13 @@ import { IStudent } from '../shared/index'
   styles:[`
   .list-group-item{
     margin-top: 20px;
-    border-top: 3px solid #1976d2;
+    border-left: 3px solid #1976d2;
+    cursor: pointer;
   }
+  .list-group-item:hover{
+    opacity: 78%;
+  }
+  
   .list-group{
     margin-top: 20px;
     
